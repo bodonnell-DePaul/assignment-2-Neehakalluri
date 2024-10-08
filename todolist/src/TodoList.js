@@ -1,49 +1,28 @@
 import './TodoList.css';
-import { Container, Form } from 'react-bootstrap';
+import { Container, Row, Navbar, NavbarBrand, Tab, Col } from 'react-bootstrap';
+import ItemListContainer from './views/ItemListContainer';
+import FormContainer from './views/FormContainer';
+import ItemDescription from './views/ItemDescription';
 
 function TodoList() {
   return (
-    <div className="container-fluid bg-light">
-      <div className='navbar'>
-        <div className='navbar-brand'>Assignment 2: Neeha Kalluri ToDo List</div>
-      </div>
-      <div className="row">
-        <div className="col-md-3">
-          <FormContainer />
-        </div>
-        <div className="col-md-3 mr-2">
-          <ItemListContainer />
-        </div>
-        <div className="col-md-6 mr-2">
-
-        </div>
-      </div>
-    </div>
+    <Container fluid className="bg-light vh-100">
+      <Navbar className='navbar'>
+        <NavbarBrand>Assignment 2: ToDo List</NavbarBrand>
+      </Navbar>
+      <Tab.Container fluid>
+        <Row>
+          <Col md={4}><FormContainer /></Col>
+          <Col md={3}>
+            <ItemListContainer />
+          </Col>
+          <Col md={5}>
+            <ItemDescription />
+          </Col>
+        </Row>
+      </Tab.Container>
+    </Container>
   );
 }
 
-function FormContainer() {
-  return (
-    <div className='card'>
-      <div className='form px-2'>
-        <h4 className='pt-2 pb-2 text-center lead text-dark'>Add New Item</h4>
-        <div className="form-group mb-3">
-          <input className='form-control' type='text' placeholder='Title' />
-        </div>
-        <div className="form-group mb-3 w-50">
-          <input className='form-control' type='date' placeholder='Due Date' />
-        </div>
-        <div className='btn btn-primary mb-3' type="submit">Submit</div>
-      </div>
-    </div>
-  )
-}
-
-function ItemListContainer() {
-  return (
-    <div className='list-group bg-primary'>
-      
-    </div>
-  );
-}
 export default TodoList;
