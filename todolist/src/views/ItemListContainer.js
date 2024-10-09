@@ -1,9 +1,7 @@
 import { ListGroup } from 'react-bootstrap';
 import { todos } from '../todoItems';
-import { useState } from 'react';
 
-function ItemListContainer() {
-    let [activeTodo, setActiveTodo] = useState(0);
+function ItemListContainer({activeId, setActiveId}) {
 
     const getVariant = (dueDate) => {
         const currentDate = new Date();
@@ -26,9 +24,9 @@ function ItemListContainer() {
                         className={"list-group-item-"}
                         role='tab'
                         action={true}
-                        active={index === activeTodo}
+                        active={index === activeId}
                         key={index}
-                        onClick={() => setActiveTodo(index)}>
+                        onClick={() => setActiveId(index)}>
                         <a className={'list-group-item-'+ getVariant(item.dueDate)}>{item.title}</a>
                         </ListGroup.Item>
                 );
