@@ -10,7 +10,7 @@ function TodoList() {
   return (
     <Container fluid className="bg-light vh-100">
       <Navbar className='navbar'>
-        <NavbarBrand>Assignment 2: ToDo List</NavbarBrand>
+        <NavbarBrand>Assignment 2: Neeha Kalluri ToDo List</NavbarBrand>
       </Navbar>
       <Tab.Container fluid>
         <Row>
