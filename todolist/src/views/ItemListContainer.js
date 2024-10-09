@@ -26,13 +26,13 @@ function ItemListContainer({ activeId, setActiveId }) {
                 return (
                     <ListGroup.Item variant={getVariant(item.dueDate)}
                         eventKey={"#item" + index}
-                        className={getVariant(item.dueDate)}
+                        className='mb-2 '
                         role='tab'
                         action={true}
                         active={index === activeId}
                         key={index}
                         onClick={() => setActiveId(index)}>
-                        <a className={'list-group-item-' + getVariant(item.dueDate)}>{item.title}</a>
+                        <a className={'text-decoration-none text-reset list-group-item-' + getVariant(item.dueDate)}>{item.title}</a>
                     </ListGroup.Item>
                 );
             })

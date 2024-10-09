@@ -2,9 +2,8 @@ import { Card, Form } from 'react-bootstrap';
 
 function FormContainer() {
     return (
-        <Card>
+        <Card style={{ backgroundColor: '#1FEB6A' }}>
             <Form className='px-2'>
-                <div className='h4 pt-2 pb-2 text-center lead text-dark'>Add New Item</div>
                 <Form.Group className="mb-3">
                     <Form.Label className='mx-2'>Todo item</Form.Label>
                     <Form.Control className='form-control' type='text' placeholder='Add todo item' />
